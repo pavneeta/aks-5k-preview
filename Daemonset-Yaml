@@ -37,7 +37,7 @@ spec:
           - -exc
           - |
             target="/etc/default/kubelet"
-            desiredval="node-status-update-frequency=1m"
+            desiredval="node-status-update-frequency=10s"
             if grep -q "\-\-$desiredval" "$target" ; then
                 echo 'Already up to date'
                 sleep infinity 
